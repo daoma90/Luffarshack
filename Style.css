@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: anton, sans-serif;
+}
+
+body {
+  background-color: rgb(71, 73, 87);
+}
+
+header {
+    text-align: center;
+    color: rgb(21, 22, 22);
+    font-size: 200%;
+    background-color: rgb(248, 243, 233);
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(248, 243, 233);
+    border: 1px solid black;
+  }
+
+.column:hover {
+    cursor: pointer;
+    background: lightgreen; 
+  }
+
+.roundCount {
+    border: 3px solid rgb(255, 255, 255);
+    border-top: 20px solid rgb(255, 255, 255);
+    margin: 1% auto;
+    margin-bottom: 1% auto;
+    width: 8%;
+    height: 10%;
+    position: relative;
+    
+  }
+
+.countHead {
+    position: absolute;
+    top: -30%;
+    left: 20%;
+  }
+
+.count {
+    position: absolute;
+    top: -12%;
+    left: 10%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 400%;
+  }
+
+.player1Plate {
+    position: absolute;
+    top: 9%;
+    left: 30.5%;
+    font-size: 200%;
+    background-color: rgb(71, 73, 87);
+    border: 5px solid rgb(122, 236, 111);
+    padding: .5%;
+    padding-right: 4%;
+    color: rgb(248, 243, 233);
+  }
+
+  .cross {
+    position: absolute;
+    top: 10.2%;
+    left: 36%;
+  }
+
+.player2Plate {
+    position: absolute;
+    top: 9%;
+    right: 30%;
+    font-size: 200%;
+    background-color: rgb(71, 73, 87);
+    border: 3px solid rgb(255, 255, 255);
+    padding: .5%;
+    padding-right: 4%;
+    color: rgb(248, 243, 233);
+  }
+
+  .circle {
+    position: absolute;
+    top: 10.2%;
+    right: 31%;
+  }
+
+.player1Win {
+    position: absolute;
+    top: 8.5%;
+    left: 30.5%;
+    font-size: 250%;
+    background-color: rgb(71, 73, 87);
+    border: 5px solid rgb(122, 236, 111);
+    padding: .5%;
+    color: rgb(248, 243, 233);
+    visibility: hidden;
+  }
+
+  .crossWin {
+    position: absolute;
+    top: 10.2%;
+    left: 36.6%;
+    visibility: hidden;
+  }
+
+
+
+.player2Win {
+    position: absolute;
+    top: 8.5%;
+    right: 30%;
+    font-size: 250%;
+    background-color: rgb(71, 73, 87);
+    border: 5px solid rgb(122, 236, 111);
+    padding: .5%;
+    color: rgb(248, 243, 233);
+    visibility: hidden;
+  }
+
+  .circleWin {
+    position: absolute;
+    top: 10.2%;
+    right: 35.3%;
+    visibility: hidden;
+  }
+
+.playAgainButton {
+    position: absolute;
+    top: 96%;
+    left: 47.5%;
+    font-size: 150%;
+    visibility: hidden;
+  }
