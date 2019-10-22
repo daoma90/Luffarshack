@@ -1,7 +1,8 @@
-function winCondition(column, row, gridHeight, gridLength, array, player) {
-    if (vertical(column, gridHeight, array, player)) {
+//Samlingsfunktion för vinnar algoritmerna.
+function winCondition(column, row, boardSize, array, player) {
+    if (vertical(column, boardSize, array, player)) {
         return true;
-    } else if (horizontal(row, gridLength, array, player)){
+    } else if (horizontal(row, boardSize, array, player)){
         return true;
     } else if (diagonalSlope(row, column, array, player)){
         return true;
@@ -10,9 +11,10 @@ function winCondition(column, row, gridHeight, gridLength, array, player) {
     } else return false;
 }
 
-function vertical(column, gridHeight, array, player) {
+//Funktionen tar kolumnkoordinaten från den senaste turen och kollar hela raden efter 5 i rad. För varje lika markör på raken ökar "inARowCount" variabeln.
+function vertical(column, boardSize, array, player) {
     let inARowCount = 0;
-    for (let i = 0; i < gridHeight; i++){
+    for (let i = 0; i < boardSize; i++){
         if (array[i][column] === player){
             inARowCount++;
             if (inARowCount === 5){
@@ -24,9 +26,10 @@ function vertical(column, gridHeight, array, player) {
     return false;
 }
 
-function horizontal(row, gridLength, array, player) {
+//Samma som ovan fast horisontellt.
+function horizontal(row, boardSize, array, player) {
     let inARowCount = 0;
-    for (let i = 0; i < gridLength; i++){
+    for (let i = 0; i < boardSize; i++){
         if (array[row][i] === player){
             inARowCount++;
             if (inARowCount === 5){
@@ -38,6 +41,7 @@ function horizontal(row, gridLength, array, player) {
     return false;
 }
 
+//Funktionen kollar diagonalen som är en nedförsbacke. Tar koordinaten från den senaste turen, och tittar på de 4 positionerna åt nordväst och sydöst.
 function diagonalSlope(row, column, array, player) {
     let inARowCount = 0;
     for (let i = 0; i < 5; i++){
@@ -61,6 +65,7 @@ function diagonalSlope(row, column, array, player) {
 
 }
 
+//Samma som ovan men kollar diagonalen som är en uppförsbacke.
 function diagonalHill(row, column, array, player) {
     let inARowCount = 0;
     for (let i = 0; i < 5; i++){
