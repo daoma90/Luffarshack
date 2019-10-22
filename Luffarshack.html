@@ -2,13 +2,13 @@
 <HTML>
 <head>
     <link rel="stylesheet" type="text/css" href="Style.css">
-    <title>Luffarshack</title>
+    <title>Noughts and crosses</title>
 </head>
 <body>
-    <header>Luffarshack</header>
+    <header>Noughts and crosses</header>
     <div class="roundCount">
-        <div class="countHead">Round counter</div>
-        <div class="count"></div>
+        <p class="countHead">Round counter</p>
+        <p class="count"></p>
         
     </div>
     <div>
@@ -18,10 +18,17 @@
         <p class ="player2Win" id="player2WinHide">Player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wins!</p><img class="circleWin" src="Circle.PNG" height="50" width="50">
     </div>
     <div class="grid" id="board" ></div>
+    <ol>
+        <p class="information">Information:</p>
+        <li>Connect 5 horizontally, vertically or diagonally to win.</li>
+        <li>The player with the green border has the turn.</li>
+        <li>When the game is over, press "Play again" to start a new game.</li>
+    </ol>
     
     <button class="playAgainButton" id="playAgain">Play again</button>
     <script type="application/javascript" src="Functions.js"></script>
     <script type="application/javascript" src="Main.js"></script>
+    <script type="application/javascript" src="CheckWinner.js"></script>
 </body>
 
 </HTML>

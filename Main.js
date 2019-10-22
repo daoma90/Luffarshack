@@ -1,6 +1,7 @@
+const boardSize = prompt("Choose the length of the board sides")
 let board = document.querySelector("#board");
-const gridHeight = 25;
-const gridLength = 25;
+const gridHeight = boardSize;
+const gridLength = boardSize;
 const playerX = "<img src='Cross.JPG' height='25' width='25'>";
 const playerO = "<img src='Circle.PNG' height='25' width='25'>";
 
@@ -28,11 +29,8 @@ board.addEventListener("click", function(event) {
             document.querySelector(".player2Plate").style.border = "5px solid lightgreen";
             
             if (winCondition(column, row, gridHeight, gridLength, gridArray, "x")){
-                document.querySelector(".player1Win").style.visibility = "visible";
-                document.querySelector(".crossWin").style.visibility = "visible";
-                document.querySelector(".player2Plate").style.border = "3px solid rgb(255, 255, 255)";
+                player1Wins();
                 disableGridButtons(gridHeight, gridLength);
-                document.querySelector(".playAgainButton").style.visibility = "visible";
                 playAgain(playAgainButton);
             }
         } 
@@ -49,11 +47,8 @@ board.addEventListener("click", function(event) {
             document.querySelector(".player2Plate").style.border = "3px solid rgb(255, 255, 255)";
 
             if (winCondition(column, row, gridHeight, gridLength, gridArray, "o")){
-                document.querySelector(".player2Win").style.visibility = "visible";
-                document.querySelector(".circleWin").style.visibility = "visible";
-                document.querySelector(".player1Plate").style.border = "3px solid rgb(255, 255, 255)";
+                player2Wins();
                 disableGridButtons(gridHeight, gridLength)
-                document.querySelector(".playAgainButton").style.visibility = "visible";
                 playAgain(playAgainButton);
             }
         }

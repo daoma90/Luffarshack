@@ -28,66 +28,6 @@ function addToArray(row, column, array, player){
     array[row][column] = player;
 }
 
-function winCondition(column, row, gridHeight, gridLength, array, player) {
-    if (vertical(column, gridHeight, array, player)) {
-        return true;
-    } else if (horizontal(row, gridLength, array, player)){
-        return true;
-    } else if (diagonalSlope(row, column, array, player)){
-        return true;
-    } else return false;
-}
-
-function vertical(column, gridHeight, array, player) {
-    let inARowCount = 0;
-    for (let i = 0; i < gridHeight; i++){
-        if (array[i][column] === player){
-            inARowCount++;
-            if (inARowCount === 5){
-                return true;
-            }
-
-        } else inARowCount = 0;
-    }
-    return false;
-}
-
-function horizontal(row, gridLength, array, player) {
-    let inARowCount = 0;
-    for (let i = 0; i < gridLength; i++){
-        if (array[row][i] === player){
-            inARowCount++;
-            if (inARowCount === 5){
-                return true;
-            }
-
-        } else inARowCount = 0;
-    }
-    return false;
-}
-
-function diagonalSlope(row, column, array, gridLength, player) {
-    let startPositionRow = row - column; 
-    let startPositionCol = column - column;
-    let loops = gridLength - Math.abs(row - column);
-    let inARowCount = 0;
-    for (let i = startPositionCol; i < loops; i++){
-        if (array[startPositionRow][i] === player){
-            inARowCount++;
-            if (inARowCount === 5){
-                return true;
-            }
-        } else inARowCount = 0;
-        startPositionRow++
-    }
-    return false;
-
-}
-
-function diagonalHill(row, column, array, player) {
-   
-}
-
 function disableGridButtons(gridHeight, gridLength) {
     let totalButtons = gridHeight * gridLength;
     let buttons = document.querySelectorAll(".column");
@@ -96,7 +36,20 @@ function disableGridButtons(gridHeight, gridLength) {
     }
 }
 
+function player1Wins(){
+    document.querySelector(".player1Win").style.visibility = "visible";
+    document.querySelector(".crossWin").style.visibility = "visible";
+    document.querySelector(".player2Plate").style.border = "3px solid rgb(255, 255, 255)";
+}
+
+function player2Wins(){
+    document.querySelector(".player2Win").style.visibility = "visible";
+    document.querySelector(".circleWin").style.visibility = "visible";
+    document.querySelector(".player1Plate").style.border = "3px solid rgb(255, 255, 255)";
+}
+
 function playAgain (button){
+    document.querySelector(".playAgainButton").style.visibility = "visible";
     button.addEventListener("click", function(event){
         window.location.reload();
     })
