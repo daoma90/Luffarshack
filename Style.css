@@ -12,24 +12,152 @@ body {
 
 header {
     text-align: center;
-    color: rgb(21, 22, 22);
+    color: rgb(255, 255, 255);
     font-size: 200%;
-    background-color: rgb(248, 243, 233);
+    background-color: rgb(107, 110, 131);
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-ol {
-  color: white;
+.informationButton {
   position: absolute;
-  top: 10%;
+  top: 7%;
   left: 1%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.informationWindow {
+  position: absolute;
+  top: 12%;
+  border: 5px solid rgb(47, 113, 170);
+  background-color: rgb(60, 144, 218);
+  margin-left: 10px;
+  padding: 5px;
+  padding-left: 25px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.flexContainerStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 30.5% 1% 30.5%;
+}
+
+.countBorder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid rgb(255, 255, 255);
+    border-top: 20px solid rgb(255, 255, 255);
+    background-color: rgb(56, 58, 66);
+    border-radius: 5px;
+    height: 100px;
+    width: 150px;
+    text-align: center;
+  }
+
+.countHead {
+    margin-top: -16%;
+    margin-bottom: -7%;
+}
+
+.count {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 400%;
+  }
+
+.player1Plate {
+    display: flex;
+    flex-direction: row;
+    font-size: 200%;
+    background-color: rgb(56, 58, 66);
+    border: 5px solid rgb(122, 236, 111);
+    padding: 5%;
+    padding-right:10%;
+    color: rgb(248, 243, 233);
+    border-radius: 5px;
+  }
+
+.cross {
+    margin-left: 6%;
+  }
+
+.player2Plate {
+    display: flex;
+    flex-direction: row;
+    font-size: 200%;
+    background-color: rgb(56, 58, 66);
+    border: 3px solid rgb(255, 255, 255);
+    padding: 5%;
+    padding-right: 10%;
+    color: rgb(248, 243, 233);
+    border-radius: 5px;
+  }
+
+.circle {
+    margin-left: 6%;
+  }
+
+.player1Win {
+    position: absolute;
+    top: 8%;
+    left: 30.5%;
+    font-size: 250%;
+    background-color: rgb(56, 58, 66);
+    border: 5px solid rgb(122, 236, 111);
+    padding: .5%;
+    color: rgb(248, 243, 233);
+    visibility: hidden;
+    border-radius: 5px;
+  }
+
+.crossWin {
+    position: absolute;
+    top: 19%;
+    left: 44%;
+    visibility: hidden;
+  }
+
+.player2Win {
+    position: absolute;
+    top: 8%;
+    right: 30.5%;
+    font-size: 250%;
+    background-color: rgb(56, 58, 66);
+    border: 5px solid rgb(122, 236, 111);
+    padding: .5%;
+    color: rgb(248, 243, 233);
+    visibility: hidden;
+    border-radius: 5px;
+  }
+
+.circleWin {
+    position: absolute;
+    top: 19%;
+    right: 37.5%;
+    visibility: hidden;
+  }
+
+ol {
+    color: white;
 }
 
 .information {
-  font-size: 200%;
+    font-size: 200%;
 }
 
 li {
-  font-size: 120%;
+    font-size: 120%;
+}
+
+.flexContainerMainArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid {
@@ -37,7 +165,6 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
   }
 
 .row {
@@ -57,111 +184,22 @@ li {
     background: rgb(186, 216, 243); 
   }
 
-.roundCount {
-    border: 3px solid rgb(255, 255, 255);
-    border-top: 20px solid rgb(255, 255, 255);
-    margin: 1% auto;
-    margin-bottom: 1% auto;
-    width: 8%;
-    height: 10%;
-    position: relative;
-    
-  }
-
-.countHead {
-  position: absolute;
-    top: -30%;
-    left: 35%;
-  }
-
-.count {
-    position: absolute;
-    top: -12%;
-    left: 10%;
-    color: rgb(255, 255, 255);
-    font-size: 400%;
-  }
-
-.player1Plate {
-    position: absolute;
-    top: 9%;
-    left: 30.5%;
-    font-size: 200%;
-    background-color: rgb(71, 73, 87);
-    border: 5px solid rgb(122, 236, 111);
-    padding: .5%;
-    padding-right: 4%;
-    color: rgb(248, 243, 233);
-  }
-
-  .cross {
-    position: absolute;
-    top: 10.2%;
-    left: 36%;
-  }
-
-.player2Plate {
-    position: absolute;
-    top: 9%;
-    right: 30.5%;
-    font-size: 200%;
-    background-color: rgb(71, 73, 87);
-    border: 3px solid rgb(255, 255, 255);
-    padding: .5%;
-    padding-right: 4%;
-    color: rgb(248, 243, 233);
-  }
-
-  .circle {
-    position: absolute;
-    top: 10.2%;
-    right: 31.5%;
-  }
-
-.player1Win {
-    position: absolute;
-    top: 8.5%;
-    left: 30.5%;
-    font-size: 250%;
-    background-color: rgb(71, 73, 87);
-    border: 5px solid rgb(122, 236, 111);
-    padding: .5%;
-    color: rgb(248, 243, 233);
-    visibility: hidden;
-  }
-
-  .crossWin {
-    position: absolute;
-    top: 10.2%;
-    left: 36.6%;
-    visibility: hidden;
-  }
-
-
-
-.player2Win {
-    position: absolute;
-    top: 8.5%;
-    right: 30.5%;
-    font-size: 250%;
-    background-color: rgb(71, 73, 87);
-    border: 5px solid rgb(122, 236, 111);
-    padding: .5%;
-    color: rgb(248, 243, 233);
-    visibility: hidden;
-  }
-
-  .circleWin {
-    position: absolute;
-    top: 10.2%;
-    right: 35.9%;
-    visibility: hidden;
-  }
-
 .playAgainButton {
     position: absolute;
-    top: 30%;
-    left: 11%;
-    font-size: 150%;
+    top: 35%;
+    left: 9%;
+    font-size: 300%;
+    padding: 0.1%;
+    color: rgb(47, 113, 170);
+    background-color: rgb(71, 73, 87);
+    border: 5px solid rgb(47, 113, 170);
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgb(20, 20, 20);
     visibility: hidden;
+  }
+
+  .playAgainButton:hover {
+    color: rgb(60, 144, 218);
+    border: 5px solid rgb(60, 144, 218);
+    background-color: rgb(94, 93, 93);
   }

@@ -24,15 +24,15 @@ function playerMarkerSize(boardSize){
     } else if (boardSize >= 40 && boardSize <= 49){
         return 12;
     } else if (boardSize >= 50 && boardSize <= 59){
-        return 10;
+        return 9;
     } else if (boardSize >= 60 && boardSize <= 69){
-        return 8;
+        return 7;
     } else if (boardSize >= 70 && boardSize <= 79){
         return 6;
     } else if (boardSize >= 80 && boardSize <= 89){
         return 5;
     } else if (boardSize >= 90 && boardSize <= 100){
-        return 5;
+        return 4;
     } else return 25;
 }
 

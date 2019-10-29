@@ -6,29 +6,38 @@
 </head>
 <body>
     <header>Noughts and crosses</header>
-    <div class="roundCount">
-        <p class="countHead">Round</p>
-        <p class="count"></p>
+    <div class="informationButton"><img class="informationIcon" src="information.PNG" height="25" width="25"></div>
+    <div class="informationWindow">
+        <ol>
+            <p class="information">Information:</p>
+            <li>Connect 5 horizontally, vertically or diagonally to win.</li>
+            <li>The player with the green border has the turn.</li>
+            <li>When the game is over, press "Play again" to start a new game.</li>
+        </ol>
+    </div>
+    <div class="flexContainerStatus">
+        <div>
+            <p class ="player1Plate" id="player1">Player <img class="cross" src="Cross.JPG" height="50" width="50"></p> 
+            <p class ="player1Win" id="player1WinHide">Player&nbsp;&nbsp;&nbsp;<img class="crossWin" src="Cross.JPG" height="50" width="50">&nbsp;&nbsp;&nbsp;wins!</p>
+        </div>
+        <div class="countBorder">
+            <p class="countHead">Round</p>
+            <p class="count"></p>
+        </div>
         
+        <div>
+            <p class ="player2Plate" id="player2">Player <img class="circle" src="Circle.PNG" height="50" width="50"></p> 
+            <p class ="player2Win" id="player2WinHide">Player&nbsp;&nbsp;&nbsp;<img class="circleWin" src="Circle.PNG" height="50" width="50">&nbsp;&nbsp;&nbsp;wins!</p>
+        </div>
     </div>
-    <div>
-        <p class ="player1Plate" id="player1">Player</p> <img class="cross" src="Cross.JPG" height="50" width="50">
-        <p class ="player2Plate" id="player2">Player</p> <img class="circle" src="Circle.PNG" height="50" width="50">
-        <p class ="player1Win" id="player1WinHide">Player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wins!</p><img class="crossWin" src="Cross.JPG" height="50" width="50">
-        <p class ="player2Win" id="player2WinHide">Player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wins!</p><img class="circleWin" src="Circle.PNG" height="50" width="50">
+    <div class="flexContainerMainArea">
+        <div class="grid" id="board" ></div>
     </div>
-    <div class="grid" id="board" ></div>
-    <ol>
-        <p class="information">Information:</p>
-        <li>Connect 5 horizontally, vertically or diagonally to win.</li>
-        <li>The player with the green border has the turn.</li>
-        <li>When the game is over, press "Play again" to start a new game.</li>
-    </ol>
-    
     <button class="playAgainButton" id="playAgain">Play again</button>
     <script type="application/javascript" src="Functions.js"></script>
     <script type="application/javascript" src="Main.js"></script>
     <script type="application/javascript" src="CheckWinner.js"></script>
+    
 </body>
 
 </HTML>

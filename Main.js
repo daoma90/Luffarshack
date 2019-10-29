@@ -1,11 +1,18 @@
 //Spelarna kan välja storlek på brädet. Från 5x5 till 100x100.
-let boardSize = prompt("Choose the length of the boards sides")
-while (boardSize > 100 || boardSize < 5){
-    boardSize = prompt("5/100 is the minimum/maximum length of the boards sides. Pick again!")
+let boardSize = prompt(`Choose the length of the board sides
+Minimum: 5
+Maximum: 100
+Recommended: 25`)
+while (boardSize > 100 || boardSize < 5 || isNaN(boardSize)){
+    boardSize = prompt(`Your choice was not a number between 5 and 100, pick again!
+Minimum: 5
+Maximum: 100
+Recommended: 25`)
 }
 
 let board = document.querySelector("#board");
 let playAgainButton = document.querySelector("#playAgain");
+let infoButton = document.querySelector(".informationButton");
 
 //Använder en funktion som bestämmer storleken på spelarnas markörer på brädet, beroende på hur stort brädet är.
 let playerMarkerSizeX = playerMarkerSize(boardSize);
@@ -22,6 +29,14 @@ createGrid (boardSize, board);
 //Räknar rundor
 let numberOfTurns = document.querySelector(".count");
 numberOfTurns.textContent = 1;
+
+infoButton.addEventListener("mouseenter", function(event){
+    document.querySelector(".informationWindow").style.visibility = "visible";
+})
+
+infoButton.addEventListener("mouseout", function(event){
+    document.querySelector(".informationWindow").style.visibility = "hidden";
+})
 
 //Denna kod bestämmer vems tur det är med hjälp av "player" variabeln.
 let player = "x";
