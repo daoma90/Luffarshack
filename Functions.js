@@ -83,14 +83,18 @@ function disableGridButtons(boardSize) {
 
 //Ändrar spelarnas rutor när någon vunnit. För att annonsera vinnaren.
 function player1Wins(){
-    document.querySelector(".player1Win").style.visibility = "visible";
-    document.querySelector(".crossWin").style.visibility = "visible";
+    document.querySelector(".player1Plate").style.display = "none";
+    document.querySelector(".cross").style.display = "none";
+    document.querySelector(".player1Win").style.display = "flex";
+    document.querySelector(".crossWin").style.display = "flex";
     document.querySelector(".player2Plate").style.border = "3px solid rgb(255, 255, 255)";
 }
 
 function player2Wins(){
-    document.querySelector(".player2Win").style.visibility = "visible";
-    document.querySelector(".circleWin").style.visibility = "visible";
+    document.querySelector(".player2Plate").style.display = "none";
+    document.querySelector(".circle").style.display = "none";
+    document.querySelector(".player2Win").style.display = "flex";
+    document.querySelector(".circleWin").style.display = "flex";
     document.querySelector(".player1Plate").style.border = "3px solid rgb(255, 255, 255)";
 }
 

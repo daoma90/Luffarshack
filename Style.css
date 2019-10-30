@@ -11,11 +11,11 @@ body {
 }
 
 header {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 200%;
-    background-color: rgb(107, 110, 131);
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 200%;
+  background-color: rgb(107, 110, 131);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .informationButton {
@@ -46,126 +46,120 @@ header {
 }
 
 .countBorder {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border: 3px solid rgb(255, 255, 255);
-    border-top: 20px solid rgb(255, 255, 255);
-    background-color: rgb(56, 58, 66);
-    border-radius: 5px;
-    height: 100px;
-    width: 150px;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid rgb(255, 255, 255);
+  border-top: 20px solid rgb(255, 255, 255);
+  background-color: rgb(56, 58, 66);
+  border-radius: 5px;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+}
 
 .countHead {
-    margin-top: -16%;
-    margin-bottom: -7%;
+  margin-top: -16%;
+  margin-bottom: -7%;
 }
 
 .count {
-    width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 400%;
-  }
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: 400%;
+}
 
 .player1Plate {
-    display: flex;
-    flex-direction: row;
-    font-size: 200%;
-    background-color: rgb(56, 58, 66);
-    border: 5px solid rgb(122, 236, 111);
-    padding: 5%;
-    padding-right:10%;
-    color: rgb(248, 243, 233);
-    border-radius: 5px;
-  }
+  display: flex;
+  flex-direction: row;
+  font-size: 200%;
+  background-color: rgb(56, 58, 66);
+  border: 5px solid rgb(122, 236, 111);
+  padding: 5%;
+  padding-right:10%;
+  color: rgb(248, 243, 233);
+  border-radius: 5px;
+}
 
 .cross {
-    margin-left: 6%;
-  }
+  display: flex;
+  margin-left: 6%;
+}
 
 .player2Plate {
-    display: flex;
-    flex-direction: row;
-    font-size: 200%;
-    background-color: rgb(56, 58, 66);
-    border: 3px solid rgb(255, 255, 255);
-    padding: 5%;
-    padding-right: 10%;
-    color: rgb(248, 243, 233);
-    border-radius: 5px;
-  }
+  display: flex;
+  flex-direction: row;
+  font-size: 200%;
+  background-color: rgb(56, 58, 66);
+  border: 3px solid rgb(255, 255, 255);
+  padding: 5%;
+  padding-right: 10%;
+  color: rgb(248, 243, 233);
+  border-radius: 5px;
+}
 
 .circle {
-    margin-left: 6%;
+  display: flex;
+  margin-left: 6%;
   }
 
 .player1Win {
-    position: absolute;
-    top: 8%;
-    left: 30.5%;
-    font-size: 250%;
-    background-color: rgb(56, 58, 66);
-    border: 5px solid rgb(122, 236, 111);
-    padding: .5%;
-    color: rgb(248, 243, 233);
-    visibility: hidden;
-    border-radius: 5px;
-  }
+  display: none;
+  flex-direction: row;
+  font-size: 250%;
+  background-color: rgb(56, 58, 66);
+  border: 5px solid rgb(122, 236, 111);
+  padding: 5%;
+  padding-right: 10%;
+  color: rgb(248, 243, 233);
+  border-radius: 5px;
+}
 
 .crossWin {
-    position: absolute;
-    top: 19%;
-    left: 44%;
-    visibility: hidden;
-  }
+  display: none;
+}
 
 .player2Win {
-    position: absolute;
-    top: 8%;
-    right: 30.5%;
-    font-size: 250%;
-    background-color: rgb(56, 58, 66);
-    border: 5px solid rgb(122, 236, 111);
-    padding: .5%;
-    color: rgb(248, 243, 233);
-    visibility: hidden;
-    border-radius: 5px;
+  display: none;
+  flex-direction: row;
+  font-size: 250%;
+  background-color: rgb(56, 58, 66);
+  border: 5px solid rgb(122, 236, 111);
+  padding-right: 10%;
+  padding: 5%;
+  color: rgb(248, 243, 233);
+  border-radius: 5px;
   }
 
 .circleWin {
-    position: absolute;
-    top: 19%;
-    right: 37.5%;
-    visibility: hidden;
+  display: none;
   }
 
 ol {
-    color: white;
+  color: white;
 }
 
 .information {
-    font-size: 200%;
+  font-size: 200%;
 }
 
 li {
-    font-size: 120%;
+  font-size: 120%;
 }
 
 .flexContainerMainArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 .row {
   display: flex;
@@ -173,33 +167,33 @@ li {
 }
 
 .column {
-    width: 30px;
-    height: 30px;
-    background-color: rgb(248, 243, 233);
-    border: 1px solid black;
-  }
+  width: 30px;
+  height: 30px;
+  background-color: rgb(248, 243, 233);
+  border: 1px solid black;
+}
 
 .column:hover {
-    cursor: pointer;
-    background: rgb(186, 216, 243); 
-  }
+  cursor: pointer;
+  background: rgb(186, 216, 243); 
+}
 
 .playAgainButton {
-    position: absolute;
-    top: 35%;
-    left: 9%;
-    font-size: 300%;
-    padding: 0.1%;
-    color: rgb(47, 113, 170);
-    background-color: rgb(71, 73, 87);
-    border: 5px solid rgb(47, 113, 170);
-    cursor: pointer;
-    box-shadow: 1px 1px 1px rgb(20, 20, 20);
-    visibility: hidden;
-  }
+  position: absolute;
+  top: 6%;
+  left: 3%;
+  font-size: 150%;
+  padding: 0.1%;
+  color: rgb(47, 113, 170);
+  background-color: rgb(71, 73, 87);
+  border: 5px solid rgb(47, 113, 170);
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgb(20, 20, 20);
+  visibility: hidden;
+}
 
   .playAgainButton:hover {
-    color: rgb(60, 144, 218);
-    border: 5px solid rgb(60, 144, 218);
-    background-color: rgb(94, 93, 93);
-  }
+  color: rgb(60, 144, 218);
+  border: 5px solid rgb(60, 144, 218);
+  background-color: rgb(94, 93, 93);
+}

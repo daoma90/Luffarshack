@@ -4,9 +4,9 @@ function winCondition(column, row, boardSize, array, player) {
         return true;
     } else if (horizontal(row, boardSize, array, player)){
         return true;
-    } else if (diagonalSlope(row, column, array, player)){
+    } else if (diagonalSlope(row, column, array, player, boardSize)){
         return true;
-    } else if (diagonalHill(row, column, array, player)){
+    } else if (diagonalHill(row, column, array, player, boardSize)){
         return true;
     } else return false;
 }
@@ -42,21 +42,25 @@ function horizontal(row, boardSize, array, player) {
 }
 
 //Funktionen kollar diagonalen som är en nedförsbacke. Tar koordinaten från den senaste turen, och tittar på de 4 positionerna åt nordväst och sydöst.
-function diagonalSlope(row, column, array, player) {
+function diagonalSlope(row, column, array, player, boardSize) {
     let inARowCount = 0;
     for (let i = 0; i < 5; i++){
         let currentPositionRow = parseInt(row, 10) - i;
         let currentPositionColumn = parseInt(column, 10) - i;
-        if (array[currentPositionRow][currentPositionColumn] === player){
-            inARowCount++;
-        } else break;
+        if (currentPositionRow >= 0 && currentPositionColumn >= 0) {
+            if (array[currentPositionRow][currentPositionColumn] === player){
+                inARowCount++;
+            } else break;
+        }
     }
     for (let y = 0; y < 5; y++){
         let currentPositionRow = parseInt(row, 10) + y;
         let currentPositionColumn = parseInt(column, 10) + y;
-        if (array[currentPositionRow][currentPositionColumn] === player){
-            inARowCount++;
-        } else break;
+        if (currentPositionRow < boardSize && currentPositionColumn < boardSize){
+            if (array[currentPositionRow][currentPositionColumn] === player){
+                inARowCount++;
+            } else break;
+        }
     }
     if (inARowCount > 5){
         return true;
@@ -66,21 +70,25 @@ function diagonalSlope(row, column, array, player) {
 }
 
 //Samma som ovan men kollar diagonalen som är en uppförsbacke.
-function diagonalHill(row, column, array, player) {
+function diagonalHill(row, column, array, player, boardSize) {
     let inARowCount = 0;
     for (let i = 0; i < 5; i++){
         let currentPositionRow = parseInt(row, 10) + i;
         let currentPositionColumn = parseInt(column, 10) - i;
-        if (array[currentPositionRow][currentPositionColumn] === player){
-            inARowCount++;
-        } else break;
+        if (currentPositionRow < boardSize && currentPositionColumn >= 0) {
+            if (array[currentPositionRow][currentPositionColumn] === player){
+                inARowCount++;
+            } else break;
+        }
     }
     for (let y = 0; y < 5; y++){
         let currentPositionRow = parseInt(row, 10) - y;
         let currentPositionColumn = parseInt(column, 10) + y;
-        if (array[currentPositionRow][currentPositionColumn] === player){
-            inARowCount++;
-        } else break;
+        if (currentPositionRow >= 0 && currentPositionColumn < boardSize) {
+            if (array[currentPositionRow][currentPositionColumn] === player){
+                inARowCount++;
+            } else break;
+        }
     }
     if (inARowCount > 5){
         return true;
